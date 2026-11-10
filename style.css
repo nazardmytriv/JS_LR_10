@@ -1,0 +1,227 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+  background: #fff;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+}
+.header h1 { margin: 0; font-size: 24px; }
+
+.cart {
+  position: relative;
+  color: #333;
+  display: inline-flex;
+}
+.cart:hover { color: #1a9bd7; }
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 11px;
+  background: #e53935;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* ---------- Список товарів ---------- */
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 32px 0 24px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  border: 1px solid #ddd;
+}
+
+.card {
+  position: relative;
+  flex: 1 1 25%;
+  min-width: 220px;
+  padding: 20px 16px 24px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: -1px 0 0 -1px;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1a9bd7;
+  font-size: 14px;
+  min-height: 34px;
+}
+.price { font-weight: bold; margin: 12px 0 16px; }
+.price s { color: #999; font-weight: normal; font-size: 12px; }
+
+.btn {
+  border: none;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #f4e51d;
+  color: #333;
+  cursor: pointer;
+}
+.btn:hover { background: #e0d000; }
+.btn-soon, .btn-soon:hover {
+  background: #d63384;
+  color: #fff;
+  cursor: default;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+}
+.badge-new { background: #6aaa2a; }
+.badge-hit { background: #1a9bd7; }
+
+/* ---------- Модальні вікна ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  padding: 28px 32px;
+  min-width: 280px;
+  max-width: 90%;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+.modal p { font-size: 18px; margin: 0 0 18px; }
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.modal-buttons .btn-secondary { background: #e4e4e4; }
+.modal-buttons .btn-secondary:hover { background: #d0d0d0; }
+
+/* ---------- Лічильник кількості ---------- */
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.qty button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #bbb;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 16px;
+}
+.qty input {
+  width: 56px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+.modal .qty { margin-bottom: 20px; }
+
+/* ---------- Сторінка корзини ---------- */
+.basket {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+.basket h2 { margin-top: 0; }
+
+.basket table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.basket th, .basket td {
+  border: 1px solid #999;
+  padding: 8px 10px;
+  text-align: left;
+}
+.basket th { background: #eee; }
+.basket td.num, .basket th.num { text-align: right; }
+.basket tfoot td { font-weight: bold; }
+.basket .total-label { text-align: right; }
+
+.remove {
+  font-style: italic;
+  color: #c62828;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.empty-text { font-size: 18px; }
+
+.basket-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+.basket-links a { font-size: 16px; }
+.link-pay { font-weight: bold; }
+
+@media (max-width: 600px) {
+  .header { padding: 12px 16px; }
+  .header h1 { font-size: 18px; }
+  .basket th, .basket td { padding: 6px; font-size: 13px; }
+}

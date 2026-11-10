@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Спортивний інвентар</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Спортивний інвентар</h1>
+    <a href="basket.html" class="cart" id="cartLink" title="Корзина" aria-label="Корзина">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </a>
+  </header>
+
+  <main>
+    <h2 class="title">Обов’язково додайте своє замовлення</h2>
+
+    <div class="products">
+
+      <!-- Щоб змінити товар: правте data-name, data-price, назву, ціну та src картинки -->
+      <div class="card" data-id="1" data-name="Футбольний м’яч" data-price="450">
+        <span class="badge badge-new">Новинка</span>
+        <div class="category">Футбол</div>
+        <img src="images/ball.webp" alt="Футбольний м’яч">
+        <div class="name">Футбольний м’яч</div>
+        <div class="price">1590 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="2" data-name="Гантелі 2×5 кг" data-price="680">
+        <div class="category">Фітнес</div>
+        <img src="images/dumbbells.webp" alt="Гантелі 2×5 кг">
+        <div class="name">Гантелі 2×5 кг</div>
+        <div class="price">689 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="3" data-name="Скакалка швидкісна" data-price="180">
+        <span class="badge badge-hit">Хіт продажів</span>
+        <div class="category">Кардіо</div>
+        <img src="images/Speed_​​jump_rope.jpg" alt="Скакалка швидкісна">
+        <div class="name">Скакалка швидкісна</div>
+        <div class="price">180 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="4" data-name="Килимок для йоги" data-price="320">
+        <span class="badge badge-hit">Хіт продажів</span>
+        <div class="category">Йога</div>
+        <img src="images/Yoga_mat.webp" alt="Килимок для йоги">
+        <div class="name">Килимок для йоги</div>
+        <div class="price">320 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="5" data-name="Волейбольний м’яч" data-price="520">
+        <div class="category">Волейбол</div>
+        <img src="images/Vollayball.jpg" alt="Волейбольний м’яч">
+        <div class="name">Волейбольний м’яч</div>
+        <div class="price">520 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="6" data-name="Еспандер гумовий" data-price="150">
+        <div class="category">Фітнес</div>
+        <img src="images/Rubber_expander.webp" alt="Еспандер гумовий">
+        <div class="name">Еспандер гумовий</div>
+        <div class="price">150 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <div class="card" data-id="7" data-name="Боксерські рукавички" data-price="890">
+        <div class="category">Бокс</div>
+        <img src="images/Boxing_gloves.webp" alt="Боксерські рукавички">
+        <div class="name">Боксерські рукавички</div>
+        <div class="price">890 грн</div>
+        <button class="btn add-btn">Додати у корзину</button>
+      </div>
+
+      <!-- Товар, якого немає в наявності (кнопки додавання немає) -->
+      <div class="card">
+        <span class="badge badge-new">Новинка</span>
+        <div class="category">Баскетбол</div>
+        <img src="images/Basketball_ball.webp" alt="Баскетбольний м’яч">
+        <div class="name">Баскетбольний м’яч</div>
+        <div class="price"><s>650 грн</s> 590 грн</div>
+        <button class="btn btn-soon" disabled>Незабаром у продажі</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

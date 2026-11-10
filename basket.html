@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Корзина</h1>
+    <a href="basket.html" class="cart" id="cartLink" title="Корзина" aria-label="Корзина">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </a>
+  </header>
+
+  <main class="basket">
+    <h2>Ви обрали:</h2>
+
+    <div id="basketContent"></div>
+
+    <div class="basket-links">
+      <a href="#" class="link-pay" id="payLink">Оплатити</a>
+      <a href="index.html" class="link-back">Повернутись до покупок</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
